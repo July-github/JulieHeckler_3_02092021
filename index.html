@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8"/>
+            <link rel="stylesheet" href="style.css"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"><!--Règles responsive-->
+            <!--Source des symboles utilisés Font Awesome-->
+            <script src="https://kit.fontawesome.com/dccdede72c.js" crossorigin="anonymous"></script>
+            <title>OhMyFood</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        </head>
+        <body>
+            <div id="main_page">
+                <header>
+                    <img src="./Maquettes Ohmyfood/images/logo/ohmyfood.png" alt="logo ohmyfood"/>
+                </header>
+                <section id="presentation_site">
+                    <div class="localisation_restaurants">
+                        <form method="post" action="localisation_restaurants.php">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="search" name="localisation" id="localisation" value="Paris, Belleville"/>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="concept">
+                        <p class="titre_concept">Réservez le menu qui vous convient</p>
+                        <p>Découvrez des restaurants d'exception,</br>sélectionnés par nos soins.</p>
+                        <div class="btn pres_restaurants">
+                            <a href="#presentation_restaurants">Explorez nos restaurants</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="fonctionnement_site">
+                    <p class="titre1_accueil">Fonctionnement</p>
+                    <div class="btn_fonctionnement">
+                        <form method="post" action="btn_choix_restaurant.php">
+                            <p>
+                                <i class="fas fa-mobile"></i>
+                                <input type="submit" name="btn_choix_restaurant" id="btn_choix_restaurant" value="Choisissez un restaurant"/>
+                            </p>
+                        </form>
+                        <form method="post" action="btn_choix_menu.php">
+                            <p>
+                                <i class="fas fa-list-ul"></i>
+                                <input type="submit" name="btn_choix_menu" id="btn_choix_menu" value="Composez votre menu"/>
+                            </p>
+                        </form>
+                        <form method="post" action="btn_reservation.php">
+                            <p>
+                                <i class="fas fa-store"></i>
+                                <input type="submit" name="btn_reservation" id="btn_reservation" value="Dégustez au restaurant"/>
+                            </p>
+                        </form>
+                    </div>
+                </section>
+                <section id="presentation_restaurants">
+                    <p class="titre1_accueil">Restaurants</p>
+                    <div id="presentation_restaurants_cartes">
+                        <div class="carte_restaurant">
+                            <a href="./Menu_La_palette_du_goût.html">
+                            <div class="carte_restaurant_photo">
+                                <img src="./Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo restaurant La palette du goût"/>
+                                <div class="icon_nouveau">Nouveau</div>
+                            </div>
+                            <div class="carte_restaurant_infos">
+                                <div class="carte_restaurant_infos_nom">
+                                    <p class="titres2_accueil">La palette du goût</p>
+                                    <p>Ménilmontant</p>
+                                </div>
+                                <div class="btn_like">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="carte_restaurant">
+                            <a href="">
+                            <div class="carte_restaurant_photo">
+                                <img src="./Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo restaurant La note enchantée"/>
+                                <div class="icon_nouveau">Nouveau</div>
+                            </div>
+                            <div class="carte_restaurant_infos">
+                                <div class="carte_restaurant_infos_nom">
+                                    <p class="titres2_accueil">La note enchantée</p>
+                                    <p>charonne</p>
+                                </div>
+                                <div class="btn_like">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="carte_restaurant">
+                            <a href="">
+                            <div class="carte_restaurant_photo">
+                                <img src="./Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo restaurant À la française"/>
+                            </div>
+                            <div class="carte_restaurant_infos">
+                                <div class="carte_restaurant_infos_nom">
+                                    <p class="titres2_accueil">À la française</p>
+                                    <p>Cité Rouge</p>
+                                </div>
+                                <div class="btn_like">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="carte_restaurant">
+                            <a href="">
+                            <div class="carte_restaurant_photo">
+                                <img src="./Maquettes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo restaurant Le délice des sens"/>
+                            </div>
+                            <div class="carte_restaurant_infos">
+                                <div class="carte_restaurant_infos_nom">
+                                    <p class="titres2_accueil">Le délice des sens</p>
+                                    <p>Folie Méricourt</p>
+                                </div>
+                            </div>
+                            <div class="btn_like">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer>
+            </a></p>
+                <p class="logo">ohmyfood</p>
+                <p><a href="#">
+                    <i class="fas fa-utensils"></i>
+                    Proposer un restaurant
+                </a></p>
+                <p><a href="#">
+                    <i class="fas fa-hands-helping"></i>
+                    Devenir partenaire
+                </a></p>
+                <p><a href="#">
+                    Mentions légales
+                </a></p>
+                <p><a href="#">
+                    Contact
+                </a></p>
+            </footer>
+        </body>
