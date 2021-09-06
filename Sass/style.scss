@@ -1,0 +1,99 @@
+@import "./base/colors";
+@import "./utils/mixins";
+@import "./components/_bouton";
+@import "./layouts/footer";
+
+body{
+    margin: 0 auto;
+    width: 100%;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+#main_page
+{
+    max-width: 1200px;
+}
+/*header*/
+header img{
+    display: block;
+    margin: 20px auto;
+    width: 180px;
+}
+/*responsive mobile*/
+@media all and (max-width: 667px)
+{
+header img{
+    width: 200px;
+    }
+}
+/*Section presentation du site*/
+.presentation_linear_gradient{
+    background: $color-localisation-top;
+    height: 5px;
+}
+.localisation_restaurants {
+    display: flex;
+    justify-content: center;
+    background-color: $color-localisation-back;
+        .fas{
+            margin-right: 10px;
+        }
+        .localisation{
+            font-size: 1em;
+            font-weight: 500;
+            border: none;
+            text-align: left;
+            background-color: transparent;
+        }
+}
+/*responsive mobile*/
+@media all and (max-width: 667px)
+{
+.concept{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-concept-back;
+    padding: 40px 0px;
+
+    .titre_concept{
+        @include titre_accueil;
+        text-align: center;
+    }
+    & p{
+        font-size: 1.1em;        
+        font-weight: 200;
+        text-align: center;
+    }
+    .btn.pres_restaurants{
+        margin: 15px 0px;
+
+        a{       
+        text-decoration: none;
+        color: white;
+        }
+    }
+}
+}
+/*section fonctionnement du site*/
+/*responsive mobile*/
+@media all and (max-width: 667px)
+{
+#fonctionnement_site
+{
+    padding: 30px 20px;
+}
+.titre1_accueil{
+    @include titre_accueil;
+    padding: 20px 0px;
+}
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+}
+.btn_fonctionnement{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+}

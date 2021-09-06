@@ -1,0 +1,32 @@
+footer{
+    background-color: $color-footer-back;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+        .logo{
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 1.1em;
+            color: white;
+            padding-bottom: 10px;
+        }
+        .fas{
+            color: white;
+            font-size: 0.8em;
+            margin-right: 5px;
+            
+            &.fa-hands-helping{
+                font-size: 0.7em;
+                margin-right: 2px;
+            }
+        }
+        & a{
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 350;
+        }
+        & p{
+            margin: 5px 0px;
+        }
+}
