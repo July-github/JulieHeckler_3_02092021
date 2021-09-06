@@ -2,13 +2,17 @@
     <html lang="fr">
         <head>
             <meta charset="UTF-8"/>
-            <link rel="stylesheet" href="style.css"/>
+            <link rel="stylesheet" href="sass/style.css"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"><!--Règles responsive-->
             <!--Source des symboles utilisés Font Awesome-->
             <script src="https://kit.fontawesome.com/dccdede72c.js" crossorigin="anonymous"></script>
             <title>OhMyFood</title>
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
         </head>
         <body>
             <div id="main_page">
@@ -16,17 +20,18 @@
                     <img src="./Maquettes Ohmyfood/images/logo/ohmyfood.png" alt="logo ohmyfood"/>
                 </header>
                 <section id="presentation_site">
+                    <div class="presentation_linear_gradient"></div>
                     <div class="localisation_restaurants">
                         <form method="post" action="localisation_restaurants.php">
                             <p>
                                 <i class="fas fa-map-marker-alt"></i>
-                                <input type="search" name="localisation" id="localisation" value="Paris, Belleville"/>
+                                <input type="search" name="localisation" class="localisation" value="Paris, Belleville"/>
                             </p>
                         </form>
                     </div>
                     <div class="concept">
                         <p class="titre_concept">Réservez le menu qui vous convient</p>
-                        <p>Découvrez des restaurants d'exception,</br>sélectionnés par nos soins.</p>
+                        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                         <div class="btn pres_restaurants">
                             <a href="#presentation_restaurants">Explorez nos restaurants</a>
                         </div>
@@ -34,24 +39,33 @@
                 </section>
                 <section id="fonctionnement_site">
                     <p class="titre1_accueil">Fonctionnement</p>
-                    <div class="btn_fonctionnement">
+                    <div class="fonctionnement">
+                        <div class="btn_fonctionnement">
                         <form method="post" action="btn_choix_restaurant.php">
-                            <p>
-                                <i class="fas fa-mobile"></i>
-                                <input type="submit" name="btn_choix_restaurant" id="btn_choix_restaurant" value="Choisissez un restaurant"/>
-                            </p>
+                                <div class="num_btn_fonctionnement">1</div>
+                                <div class="btn_fonctionnement_instruction">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <input type="submit" name="btn_choix_restaurant" class="btn_choix" value="Choisissez un restaurant"/>
+                                </div>
                         </form>
+                        </div>
                         <form method="post" action="btn_choix_menu.php">
-                            <p>
-                                <i class="fas fa-list-ul"></i>
-                                <input type="submit" name="btn_choix_menu" id="btn_choix_menu" value="Composez votre menu"/>
-                            </p>
+                            <div class="btn_fonctionnement">
+                                <div class="num_btn_fonctionnement">2</div>
+                                <div class="btn_fonctionnement_instruction">
+                                    <i class="fas fa-list-ul"></i>
+                                    <input type="submit" name="btn_choix_menu" class="btn_choix" value="Composez votre menu"/>
+                                </div>
+                            </div>
                         </form>
                         <form method="post" action="btn_reservation.php">
-                            <p>
-                                <i class="fas fa-store"></i>
-                                <input type="submit" name="btn_reservation" id="btn_reservation" value="Dégustez au restaurant"/>
-                            </p>
+                            <div class="btn_fonctionnement">
+                                <div class="num_btn_fonctionnement">3</div>
+                                <div class="btn_fonctionnement_instruction">
+                                    <i class="fas fa-store"></i>
+                                    <input type="submit" name="btn_reservation" class="btn_choix" value="Dégustez au restaurant"/>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </section>
@@ -59,7 +73,7 @@
                     <p class="titre1_accueil">Restaurants</p>
                     <div id="presentation_restaurants_cartes">
                         <div class="carte_restaurant">
-                            <a href="./Menu_La_palette_du_goût.html">
+                            <a href="./Menu_La_palette_du_goût.html" title="Accéder au menu" target="_blank">
                             <div class="carte_restaurant_photo">
                                 <img src="./Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo restaurant La palette du goût"/>
                                 <div class="icon_nouveau">Nouveau</div>
@@ -76,7 +90,7 @@
                             </a>
                         </div>
                         <div class="carte_restaurant">
-                            <a href="">
+                            <a href="" title="Accéder au menu" target="_blank">
                             <div class="carte_restaurant_photo">
                                 <img src="./Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo restaurant La note enchantée"/>
                                 <div class="icon_nouveau">Nouveau</div>
@@ -93,7 +107,7 @@
                             </a>
                         </div>
                         <div class="carte_restaurant">
-                            <a href="">
+                            <a href="" title="Accéder au menu" target="_blank">
                             <div class="carte_restaurant_photo">
                                 <img src="./Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo restaurant À la française"/>
                             </div>
@@ -109,7 +123,7 @@
                             </a>
                         </div>
                         <div class="carte_restaurant">
-                            <a href="">
+                            <a href="" title="Accéder au menu" target="_blank">
                             <div class="carte_restaurant_photo">
                                 <img src="./Maquettes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo restaurant Le délice des sens"/>
                             </div>
