@@ -1,10 +1,11 @@
-/* Error: Undefined variable.
- *   ,
- * 2 |     background-color: $color-footer-back;
- *   |                       ^^^^^^^^^^^^^^^^^^
- *   '
- *   sass/layouts/_footer.scss 2:23  @import
- *   sass/style.scss 1:9             root stylesheet */
+/* Error: $color: #FF79DA 0% is not a color.
+ *    ,
+ * 13 |     background: linear-gradient(180deg, lighten(($color-secondary)0%,10%), lighten(($color-primary)100%), 10%);
+ *    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   sass/utils/_mixins.scss 13:41       button-hover()
+ *   sass/components/_button.scss 15:13  @import
+ *   sass/style.scss 3:9                 root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +15,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 2 \2502      background-color: $color-footer-back;\a   \2502                        ^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass/layouts/_footer.scss 2:23  @import\a   sass/style.scss 1:9             root stylesheet";
+  content: "Error: $color: #FF79DA 0% is not a color.\a    \2577 \a 13 \2502      background: linear-gradient(180deg, lighten(($color-secondary)0%,10%), lighten(($color-primary)100%), 10%);\a    \2502                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass/utils/_mixins.scss 13:41       button-hover()\a   sass/components/_button.scss 15:13  @import\a   sass/style.scss 3:9                 root stylesheet";
 }
