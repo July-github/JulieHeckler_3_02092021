@@ -4,3 +4,14 @@
     width: 70%;
     margin: 0;
 }
+@mixin button{
+    background: $color-secondary;
+    background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
+}
+@mixin button_hover{
+    background: lighten($color-secondary, 10%);
+    background: linear-gradient(180deg, lighten(($color-secondary)0%,10%), lighten(($color-primary)100%), 10%);
+}
+@mixin button_fonctionnement_hover{
+    background: lighten($color-primary, 50%);
+}

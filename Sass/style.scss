@@ -1,6 +1,6 @@
 @import "./base/colors";
 @import "./utils/mixins";
-@import "./components/_bouton";
+@import "./components/button";
 @import "./layouts/footer";
 
 body{
@@ -13,7 +13,7 @@ body{
 {
     max-width: 1200px;
 }
-/*header*/
+/****header*****/
 header img{
     display: block;
     margin: 20px auto;
@@ -26,7 +26,7 @@ header img{
     width: 200px;
     }
 }
-/*Section presentation du site*/
+/*****Section presentation du site*****/
 .presentation_linear_gradient{
     background: $color-localisation-top;
     height: 5px;
@@ -46,14 +46,11 @@ header img{
             background-color: transparent;
         }
 }
-/*responsive mobile*/
-@media all and (max-width: 667px)
-{
 .concept{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $color-concept-back;
+    background-color: $color-fonctionnement-back;
     padding: 40px 0px;
 
     .titre_concept{
@@ -64,24 +61,21 @@ header img{
         font-size: 1.1em;        
         font-weight: 200;
         text-align: center;
+        width: 75%;
     }
-    .btn.pres_restaurants{
-        margin: 15px 0px;
-
-        a{       
+    .btn.pres_restaurants a{       
         text-decoration: none;
         color: white;
-        }
     }
 }
-}
-/*section fonctionnement du site*/
 /*responsive mobile*/
 @media all and (max-width: 667px)
 {
-#fonctionnement_site
-{
-    padding: 30px 20px;
+
+}
+/*section fonctionnement du site*/
+#fonctionnement_site{
+    padding: 30px 30px;
 }
 .titre1_accueil{
     @include titre_accueil;
@@ -96,4 +90,23 @@ header img{
     display: flex;
     justify-content: center;
 }
+/*responsive mobile*/
+@media all and (max-width: 667px)
+{
+
+}
+
+/*section restaurants*/
+/*responsive mobile*/
+#presentation_restaurants_cartes{
+    display: flex;
+    flex-direction: column;
+}
+.carte_restaurant{
+    display: flex;
+    flex-direction: column;
+}
+.carte_restaurant_photo img{
+    width: 200px;
+    height: 150px;
 }
