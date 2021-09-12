@@ -1,33 +1,41 @@
-.btn{
+.button{
     @include button;
     font-family: 'Roboto', sans-serif;
     padding: 16px 20px;
     border-radius: 30px;
-    box-shadow: $color-btn-shadow 3px 5px 7px;
+    box-shadow: $color-button-shadow 3px 5px 7px;
     font-size: 1em;
     border: none;
     text-align: center;
     width: 180px;
-
+    cursor: pointer;
+    
+    &:hover{
+        filter: brightness(120%);
+        cursor: grab;
+        box-shadow: darken($color-button-shadow, 40%) 3px 5px 7px;
+    }
     .pres_restaurants{
         margin: 15px 0px;
     }
 }
 
-.btn_fonctionnement{
+.button_functionalities{
     display: flex;
+    justify-content: center;
+    width: 90%;
     margin: 15px 0px;
-    box-shadow: $color-btn-shadow 2px 5px 20px;
+    box-shadow: $color-button-shadow 2px 5px 20px;
     border-radius: 20px;
     padding: 15px 20px;
-    background-color: $color-fonctionnement-back;
+    background-color: $color-functionalities-back;
     text-align: left;
     position: relative;
 
     & a{
         text-decoration: none;
     }
-    & .btn_choix{
+    & .button_choice{
         background: transparent;
         border: none;
         font-size: 1em;
@@ -36,11 +44,11 @@
 
     .fas{
         margin: 15px;
-        color: $color-btn-fas;
+        color: $color-button-fas;
         font-size: 1.2em;
     }
 
-    & .num_btn_fonctionnement{
+    & .number_button_functionalities{
         position: absolute;
         top: 35%;
         left: -10px;
@@ -50,4 +58,16 @@
         border-radius: 50px;
         font-size: 0.9em;
     }
+    &:hover{
+        cursor: grab;
+        background-color: lighten($color-primary, 35%);
+        .fas{
+            color: $color-primary;
+        }
+    }
+}
+/*like button*/
+.fa-heart:hover{
+    cursor: grab;
+    @include heart_hover;
 }
