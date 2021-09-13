@@ -9,6 +9,5 @@
     background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
 }
 @mixin heart_hover{
-    background: $color-primary;
     background: linear-gradient(180deg, $color-primary 0%, $color-secondary 100%);
 }

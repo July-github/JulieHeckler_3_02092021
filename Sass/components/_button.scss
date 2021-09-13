@@ -9,7 +9,8 @@
     text-align: center;
     width: 180px;
     cursor: pointer;
-    
+    color: white;
+    transition: all 400ms;
     &:hover{
         filter: brightness(120%);
         cursor: grab;
@@ -31,6 +32,7 @@
     background-color: $color-functionalities-back;
     text-align: left;
     position: relative;
+    transition: all 400ms;
 
     & a{
         text-decoration: none;
@@ -67,7 +69,23 @@
     }
 }
 /*like button*/
-.fa-heart:hover{
+.far.fa-heart{
+    font-size: 1.5em;
+    opacity: 1;
+    transition: all 200ms;
+}
+.fas.fa-heart{
+    opacity: 0;
+    font-size: 1.5em;
+    transition: all 400ms;
+}
+.button_like:hover{
     cursor: grab;
-    @include heart_hover;
+    .far{
+        opacity: 0;
+    }
+    .fas{
+        opacity: 1;
+        @include heart_hover;
+    }
 }
