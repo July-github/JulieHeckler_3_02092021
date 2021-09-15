@@ -1,15 +1,14 @@
 .loader{
-    opacity: 0;
     font-family: 'Shrikhand', sans-serif;
-    font-size: 5em;
-    color: $color-tertiary;
+    color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    font-size: 4em;
     position: absolute;
-    z-index: 1;
-    background-color: $color-functionalities-back;
-    animation: loader 1500ms 200ms both (cubic-bezier(.15,.64,.56,.33)) 2;
+    z-index: 2;
+    background-color: $color-tertiary;
+    background-clip: text;
+    transform-origin: bottom;
+    animation: loader 6000ms 200ms both (cubic-bezier(.15,.64,.56,.33));
 }

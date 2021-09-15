@@ -1,19 +1,508 @@
-/* Error: $color: #FF79DA 0% is not a color.
- *    ,
- * 13 |     background: linear-gradient(180deg, lighten(($color-secondary)0%,10%), lighten(($color-primary)100%), 10%);
- *    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   sass/utils/_mixins.scss 13:41       button-hover()
- *   sass/components/_button.scss 15:13  @import
- *   sass/style.scss 3:9                 root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: $color: #FF79DA 0% is not a color.\a    \2577 \a 13 \2502      background: linear-gradient(180deg, lighten(($color-secondary)0%,10%), lighten(($color-primary)100%), 10%);\a    \2502                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass/utils/_mixins.scss 13:41       button-hover()\a   sass/components/_button.scss 15:13  @import\a   sass/style.scss 3:9                 root stylesheet";
+@charset "UTF-8";
+@keyframes menu_apparition {
+  0% {
+    transform: translateY(3px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(2.5px);
+  }
+  65% {
+    transform: translateY(2px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
+@keyframes button_like_fill {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scaleY(0);
+  }
+  30% {
+    transform: scaleY(0.3);
+  }
+  80% {
+    transform: scaleY(0.7);
+  }
+  100% {
+    transform: scaleY(1);
+    display: none;
+  }
+}
+.loader {
+  font-family: "Shrikhand", sans-serif;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  position: absolute;
+  z-index: 2;
+  background-color: #99E2D0;
+  background-clip: text;
+  transform-origin: bottom;
+  animation: loader 6000ms 200ms both cubic-bezier(0.15, 0.64, 0.56, 0.33);
+}
+
+.button {
+  background: #FF79DA;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  font-family: "Roboto", sans-serif;
+  padding: 16px 20px;
+  border-radius: 30px;
+  box-shadow: #d1d1d1 3px 5px 7px;
+  font-size: 1em;
+  border: none;
+  text-align: center;
+  width: 180px;
+  cursor: pointer;
+  color: white;
+  transition: all 400ms;
+}
+.button:hover {
+  filter: brightness(120%);
+  cursor: grab;
+  box-shadow: #6b6b6b 3px 5px 7px;
+}
+.button .pres_restaurants {
+  margin: 15px 0px;
+}
+
+.button_functionalities {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 15px 0px;
+  box-shadow: #d1d1d1 2px 5px 20px;
+  border-radius: 20px;
+  padding: 15px 20px;
+  background-color: #F6F6F6;
+  text-align: left;
+  position: relative;
+  transition: all 400ms;
+}
+.button_functionalities a {
+  text-decoration: none;
+}
+.button_functionalities .button_choice {
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+}
+.button_functionalities .fas {
+  margin: 15px;
+  color: #9e9e9e;
+  font-size: 1.2em;
+}
+.button_functionalities .number_button_functionalities {
+  position: absolute;
+  top: 35%;
+  left: -10px;
+  background-color: #9356DC;
+  color: white;
+  padding: 4px 8.5px;
+  border-radius: 50px;
+  font-size: 0.9em;
+}
+.button_functionalities:hover {
+  cursor: grab;
+  background-color: #f2eafb;
+}
+.button_functionalities:hover .fas {
+  color: #9356DC;
+}
+
+/*like button*/
+.fas.fa-heart {
+  display: none;
+  font-size: 1.5em;
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform-origin: bottom;
+}
+
+.far.fa-heart {
+  font-size: 1.5em;
+}
+
+.button_like:hover {
+  cursor: grab;
+}
+.button_like:hover:hover .far.fa-heart {
+  display: none;
+}
+.button_like:hover:hover .fas.fa-heart {
+  display: initial;
+  animation: button_like_fill 5000ms 100ms backwards ease-in-out;
+}
+
+footer {
+  background-color: #353535;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+footer .logo {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.1em;
+  color: white;
+  padding-bottom: 10px;
+}
+footer .fas {
+  color: white;
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+footer .fas.fa-hands-helping {
+  font-size: 0.7em;
+  margin-right: 2px;
+}
+footer a {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 350;
+}
+footer p {
+  margin: 5px 0px;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+#main_page {
+  max-width: 1200px;
+  position: relative;
+  z-index: 0;
+}
+
+/******************Accueil***************/
+/****header*****/
+header img {
+  display: block;
+  margin: 20px auto;
+  width: 180px;
+}
+
+/*responsive mobile*/
+@media all and (max-width: 667px) {
+  header img {
+    width: 200px;
+  }
+}
+/*****Section website presentation*****/
+.presentation_linear_gradient {
+  background: linear-gradient(180deg, #cfcfcf 0%, #e6e6e6 100%);
+  height: 5px;
+}
+
+.localisation_restaurants {
+  display: flex;
+  justify-content: center;
+  background-color: #EAEAEA;
+}
+.localisation_restaurants .fas {
+  margin-right: 10px;
+}
+.localisation_restaurants .localisation {
+  font-size: 1em;
+  font-weight: 500;
+  border: none;
+  text-align: left;
+  background-color: transparent;
+}
+
+.concept {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: 40px 0px;
+}
+.concept h1 {
+  font-size: 1.6em;
+  font-weight: 600;
+  width: 70%;
+  margin: 0;
+  text-align: center;
+}
+.concept p {
+  font-size: 1.1em;
+  font-weight: 200;
+  text-align: center;
+  width: 75%;
+}
+.concept .button.pres_restaurants a {
+  text-decoration: none;
+  color: white;
+}
+
+/*responsive mobile*/
+/*section functionalities of the website*/
+#website_functionalities {
+  padding: 30px 0px;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: 600;
+  width: 70%;
+  margin: 0;
+  padding: 0px 20px;
+}
+
+.functionalities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+/*responsive mobile*/
+/****section restaurants****/
+#presentation_restaurants {
+  padding: 60px 0px;
+  background-color: #F6F6F6;
+}
+
+#presentation_restaurants_cartes {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: 600;
+  width: 70%;
+  margin: 0;
+  padding: 0px 20px;
+}
+
+.block_carte_restaurant a {
+  text-decoration: none;
+  font-size: 1em;
+  color: black;
+  font-weight: 300;
+}
+
+.carte_restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: #d1d1d1 2px 5px 20px;
+  margin: 15px 0px;
+  padding: 0;
+  position: relative;
+  width: auto;
+  border-radius: 15px 15px 15px 15px;
+  transform: scale(1);
+  transition: all 400ms;
+}
+.carte_restaurant img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+.carte_restaurant .icon_new {
+  position: absolute;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #278870;
+  background-color: #c1ede2;
+  padding: 7px 10px;
+  top: 15px;
+  right: 10px;
+}
+.carte_restaurant .carte_restaurant_infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  width: 90%;
+  border-radius: 0px 0px 15px 15px;
+}
+.carte_restaurant .carte_restaurant_infos h2 {
+  font-weight: 600;
+  font-size: 1em;
+  margin: 0px 0px 5px 0px;
+}
+.carte_restaurant .carte_restaurant_infos p {
+  margin: 0;
+}
+.carte_restaurant:hover {
+  transform: scale(1.04);
+  transition: transform 400ms;
+  box-shadow: #6b6b6b 3px 5px 7px;
+}
+
+/*responsive mobile*/
+.header_menu {
+  position: relative;
+}
+.header_menu .fa-arrow-left {
+  position: absolute;
+  font-size: 1.2em;
+  top: 30%;
+  left: 10%;
+}
+.header_menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/******************Page Menu La palette du goût***************/
+/****** section presentation_menu ******/
+#container_menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  position: absolute;
+  border-top: solid 10px #F6F6F6;
+  border-radius: 35px 35px 0px 0px;
+  top: 250px;
+  width: 100%;
+}
+
+#presentation_menu img {
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+
+.presentation_menu_name_restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+}
+.presentation_menu_name_restaurant h1 {
+  font-family: "Shrikhand", sans-serif;
+  padding: 0;
+}
+
+.menu_restaurant {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.menu_restaurant h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+.menu_restaurant p {
+  text-align: center;
+}
+
+.underline {
+  border-top: 2px solid #99E2D0;
+  width: 35px;
+  margin-bottom: 5px;
+}
+
+.menu {
+  margin: 0px 0px 15px 0px;
+}
+
+.dish_block {
+  display: flex;
+  flex-direction: column;
+}
+.dish_block.entree {
+  animation: menu_apparition 2500ms 200ms both ease-in-out;
+}
+.dish_block.meal {
+  animation: menu_apparition 2500ms 2600ms both ease-in-out;
+}
+.dish_block.dessert {
+  animation: menu_apparition 2500ms 5000ms both ease-in-out;
+}
+
+.check {
+  background-color: #99E2D0;
+  border-radius: 15px;
+  z-index: -1;
+  margin: 15px 0px;
+  height: 64px;
+}
+.check .fa-check-circle {
+  z-index: -1;
+  color: white;
+  font-size: 1.4em;
+  position: relative;
+  right: -350px;
+  top: 20px;
+  overflow-block: hidden;
+}
+.check .dish {
+  background-color: #F6F6F6;
+  box-shadow: #d1d1d1 2px 5px 20px;
+  border-radius: 15px;
+  padding: 10px 10px;
+  margin: 0px;
+  position: relative;
+  top: -23px;
+  z-index: 1;
+  transition: all 2s;
+}
+.check .dish:hover {
+  cursor: grab;
+  border-radius: 15px 0px 0px 15px;
+  width: 310px;
+}
+.check .dish_name {
+  max-width: 350px;
+  padding-right: 60px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.check .dish_name p {
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.check .dish_price {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9em;
+  background: #F6F6F6;
+  padding: 20px 10px 0px 5px;
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 15px;
+  width: 30px;
+}
+.check p {
+  margin: 5px 0px 0px 0px;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+.check .span {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */

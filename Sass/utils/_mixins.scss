@@ -8,6 +8,8 @@
     background: $color-secondary;
     background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
 }
-@mixin heart_hover{
-    background: linear-gradient(180deg, $color-primary 0%, $color-secondary 100%);
+@mixin heart_fill{
+    background: (linear-gradient(180deg, $color-primary 0%, $color-secondary 100%)) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

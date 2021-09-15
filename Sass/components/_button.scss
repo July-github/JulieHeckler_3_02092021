@@ -69,23 +69,25 @@
     }
 }
 /*like button*/
+.fas.fa-heart{
+    display: none;
+    font-size: 1.5em;
+    @include heart_fill;
+    transform-origin: bottom;
+}
 .far.fa-heart{
     font-size: 1.5em;
-    opacity: 1;
-    transition: all 200ms;
-}
-.fas.fa-heart{
-    opacity: 0;
-    font-size: 1.5em;
-    transition: all 400ms;
 }
 .button_like:hover{
     cursor: grab;
-    .far{
-        opacity: 0;
-    }
-    .fas{
-        opacity: 1;
-        @include heart_hover;
-    }
+
+    &:hover{
+        .far.fa-heart{
+            display: none;
+        }
+        .fas.fa-heart{
+            display: initial;
+            animation: button_like_fill 5000ms 100ms backwards ease-in-out;
+        }
+        }
 }

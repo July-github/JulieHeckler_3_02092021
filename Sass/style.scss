@@ -236,45 +236,89 @@ h1{
 .menu{
     margin: 0px 0px 15px 0px;
 }
-.dish_check{
+.dish_block{
     display: flex;
-    animation: menu_apparition 1200ms 200ms both ease-in-out;
+    flex-direction: column;
 
-    & i{
-        display: flex;
-        background-color: $color-tertiary;
-        color: white;
-        margin: 15px 0px;
-        width: 50px;
-        font-size: 1.2em;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0px 15px 15px 0px;
+    &.entree{
+    animation: menu_apparition 2500ms 200ms both ease-in-out;
+    }
+
+    &.meal{
+    animation: menu_apparition 2500ms 2600ms both ease-in-out;
+    }
+
+    &.dessert{
+    animation: menu_apparition 2500ms 5000ms both ease-in-out;
     }
 }
-.dish{
-    display: flex;
-    justify-content: space-between;
-    box-shadow: $color-button-shadow 2px 5px 20px;
+.check{
+    background-color: $color-tertiary;
     border-radius: 15px;
-    padding: 10px 10px;
+    z-index: -1;
     margin: 15px 0px;
-
-    &_name span, p{
-        text-align: left;
+    height: 64px;
+    
+    & .fa-check-circle{
+        z-index: -1;
+        color: white;
+        font-size: 1.4em;
+        position: relative;
+        right: -350px;
+        top: 20px;
+        overflow-block: hidden;
     }
+    & .dish{
+        background-color: $color-functionalities-back;
+        box-shadow: $color-button-shadow 2px 5px 20px;
+        border-radius: 15px;
+        padding: 10px 10px;
+        margin: 0px;
+        position: relative;
+        top: -23px;
+        z-index: 1;
+        transition: all 2s;
+
+        &:hover{
+            cursor: grab;
+            border-radius: 15px 0px 0px 15px;
+            width: 310px;
+        }
+
+        &_name{
+            max-width: 350px;
+            padding-right: 60px;
+            display: block;
+            position: relative;
+            z-index: 1;
+            
+            & p{
+                text-align: left;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
     &_price{
-        display: flex;
-        align-items: flex-end;
+        display: block;
         font-weight: 500;
         font-size: 0.9em;
+        background: $color-functionalities-back;
+        padding: 20px 10px 0px 5px;
+        position: absolute;
+        z-index: 2;
+        right: 10px;
+        top: 15px;
+        width: 30px;
     }
+}
     & p{
         margin: 5px 0px 0px 0px;
         font-weight: 300;
         font-size: 0.8em;
     }
-    & span{
+    & .span{
         font-weight: 500;
+        font-size: 1em;
     }
 }
