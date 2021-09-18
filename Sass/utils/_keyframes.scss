@@ -17,22 +17,22 @@
 }
 @keyframes button_like_fill{
     0%{
-        background-position: center 70%;
+        translate: center 0px;
     }
     20%{
-        background-position: center 62%;
+        translate: center 20px;
     }
     40%{
-        background-position: center 60%;
+        translate: center 40px;
     }
     60%{
-        background-position: center 58%;
+        translate: center 60px;
     }
     80%{
-        background-position: center 50%;
+        translate: center 80px;
     }
     100%{
-        background-position: center 40%;
+        translate: center 100px;
     }
 }
 @keyframes loader{

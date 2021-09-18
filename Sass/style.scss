@@ -1,10 +1,11 @@
+/******************Accueil***************/
 @import "./base/colors";
 @import "./utils/mixins";
 @import "./utils/keyframes";
 @import "./components/loader";
 @import "./components/button";
 @import "./layouts/footer";
-
+@import "./themes/stylemenu";
 body{
     margin: 0 auto;
     width: 100%;
@@ -13,23 +14,14 @@ body{
 }
 #main_page
 {
-    max-width: 1200px;
-    position: relative;
-    z-index: 0;
+    max-width: 1400px;
+    margin: 0 auto;
 }
-/******************Accueil***************/
 /****header*****/
 header img{
     display: block;
     margin: 20px auto;
-    width: 180px;
-}
-/*responsive mobile*/
-@media all and (max-width: 667px)
-{
-header img{
     width: 200px;
-    }
 }
 /*****Section website presentation*****/
 .presentation_linear_gradient{
@@ -73,29 +65,30 @@ header img{
         color: white;
     }
 }
-/*responsive mobile*/
-@media all and (max-width: 667px)
-{
-
-}
-/*section functionalities of the website*/
+/****section functionalities of the website****/
 #website_functionalities{
     padding: 30px 0px;
-}
+    }
 h1{
     @include h1;
+    font-size: 1.6em;
     padding: 0px 20px;
-}
+    }
+.functionalities{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    }
+/*responsive mobile*/
+@media all and (max-width: 847px){
 .functionalities{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0px 30px;
 }
-/*responsive mobile*/
-@media all and (max-width: 667px)
-{
-
 }
 /****section restaurants****/
 #presentation_restaurants{
@@ -104,18 +97,24 @@ h1{
 }
 #presentation_restaurants_cartes{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 10px 20px;
 }
 h1{
     @include h1;
     padding: 0px 20px;
 }
-.block_carte_restaurant a{
-    text-decoration: none;
-    font-size: 1em;
-    color: black;
-    font-weight: 300;
+.block_carte_restaurant{
+    margin: 25px;
+    width: 40%;
+
+    & a{
+        text-decoration: none;
+        font-size: 1em;
+        color: black;
+        font-weight: 300;
+    }
 }
 .carte_restaurant{
     display: flex;
@@ -169,156 +168,17 @@ h1{
     }
 }
 /*responsive mobile*/
-@media all and (max-width: 667px)
+@media all and (max-width: 847px)
 {
-
-}
-
-.header_menu{
-    position: relative;
-    .fa-arrow-left{
-        position: absolute;
-        font-size: 1.2em;
-        top: 30%;
-        left: 10%;
-    }
-    & a{
-        text-decoration: none;
-        color: black;
-    }
-}
-/******************Page Menu La palette du goût***************/
-/****** section presentation_menu ******/
-#container_menu{
+#presentation_restaurants_cartes{
     display: flex;
     flex-direction: column;
-    background-color: $color-functionalities-back;
-    position: absolute;
-    border-top: solid 10px $color-functionalities-back;
-    border-radius: 35px 35px 0px 0px;
-    top: 250px;
-    width: 100%;
-}
-#presentation_menu img{
-        width: 100%;
-        height: 220px;
-        position: relative;
-}
-.presentation_menu_name_restaurant{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 20px;
-    & h1{
-        font-family: 'Shrikhand', sans-serif;
-        padding: 0;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
     }
-}
-.menu_restaurant{
-    padding: 0px 20px;
-    display: flex;
-    flex-direction: column;
-    & h2{
-        text-transform: uppercase;
-        font-weight: 300;
-        font-size: 0.9em;
-        margin-bottom: 5px;
-    }
-    & p{
-        text-align: center;
-    }
-}
-.underline{
-    border-top: 2px solid $color-tertiary;
-    width: 35px;
-    margin-bottom: 5px;
-}
-.menu{
-    margin: 0px 0px 15px 0px;
-}
-.dish_block{
-    display: flex;
-    flex-direction: column;
-
-    &.entree{
-    animation: menu_apparition 2500ms 200ms both ease-in-out;
-    }
-
-    &.meal{
-    animation: menu_apparition 2500ms 2600ms both ease-in-out;
-    }
-
-    &.dessert{
-    animation: menu_apparition 2500ms 5000ms both ease-in-out;
-    }
-}
-.check{
-    background-color: $color-tertiary;
-    border-radius: 15px;
-    z-index: -1;
-    margin: 15px 0px;
-    height: 64px;
-    
-    & .fa-check-circle{
-        z-index: -1;
-        color: white;
-        font-size: 1.4em;
-        position: relative;
-        right: -350px;
-        top: 20px;
-        overflow-block: hidden;
-    }
-    & .dish{
-        background-color: $color-functionalities-back;
-        box-shadow: $color-button-shadow 2px 5px 20px;
-        border-radius: 15px;
-        padding: 10px 10px;
-        margin: 0px;
-        position: relative;
-        top: -23px;
-        z-index: 1;
-        transition: all 2s;
-
-        &:hover{
-            cursor: grab;
-            border-radius: 15px 0px 0px 15px;
-            width: 310px;
-        }
-
-        &_name{
-            max-width: 350px;
-            padding-right: 60px;
-            display: block;
-            position: relative;
-            z-index: 1;
-            
-            & p{
-                text-align: left;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-            }
-        }
-    &_price{
-        display: block;
-        font-weight: 500;
-        font-size: 0.9em;
-        background: $color-functionalities-back;
-        padding: 20px 10px 0px 5px;
-        position: absolute;
-        z-index: 2;
-        right: 10px;
-        top: 15px;
-        width: 30px;
-    }
-}
-    & p{
-        margin: 5px 0px 0px 0px;
-        font-weight: 300;
-        font-size: 0.8em;
-    }
-    & .span{
-        font-weight: 500;
-        font-size: 1em;
+.block_carte_restaurant{
+    margin: 10px;
+    width: 90%;
     }
 }

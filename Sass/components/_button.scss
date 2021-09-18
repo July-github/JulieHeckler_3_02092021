@@ -1,3 +1,4 @@
+/****main button****/
 .button{
     @include button;
     font-family: 'Roboto', sans-serif;
@@ -20,12 +21,10 @@
         margin: 15px 0px;
     }
 }
-
+/****button functionnalities****/
 .button_functionalities{
     display: flex;
     justify-content: center;
-    width: 90%;
-    margin: 15px 0px;
     box-shadow: $color-button-shadow 2px 5px 20px;
     border-radius: 20px;
     padding: 15px 20px;
@@ -33,6 +32,8 @@
     text-align: left;
     position: relative;
     transition: all 400ms;
+    width: 25%;
+    margin: 0 20px;
 
     & a{
         text-decoration: none;
@@ -68,26 +69,48 @@
         }
     }
 }
-/*like button*/
+/*Responsive tablette*/
+@media all and (max-width: 1000px){
+.button_functionalities{
+    & .number_button_functionalities{
+        top: -10px;
+        left: 45%;
+    }
+    & .button_functionalities_instruction{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+}
+@media all and (max-width: 847px){
+.button_functionalities{
+    width: 90%;
+    margin: 15px 0px;
+
+    & .number_button_functionalities{
+        top: 35%;
+        left: -10px;
+    }
+
+    & .button_functionalities_instruction{
+        display: block;
+    }
+}   
+}
+/****like button****/
 .fas.fa-heart{
-    display: none;
+    -webkit-text-stroke: 1px black;
     font-size: 1.5em;
     @include heart_fill;
     transform-origin: bottom;
-}
-.far.fa-heart{
-    font-size: 1.5em;
-}
-.button_like:hover{
-    cursor: grab;
+    background-position: -100% -100%;
+    background-size: 2% 100%;
 
     &:hover{
-        .far.fa-heart{
-            display: none;
-        }
-        .fas.fa-heart{
-            display: initial;
-            animation: button_like_fill 5000ms 100ms backwards ease-in-out;
-        }
-        }
+        cursor: grab;
+        animation: button_like_fill 5000ms 100ms forwards ease-in-out;
+        -webkit-animation: button_like_fill 5000ms 100ms forwards ease-in-out;
+    }
 }

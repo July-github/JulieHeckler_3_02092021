@@ -1,8 +1,9 @@
 footer{
     background-color: $color-footer-back;
-    padding-left: 20px;
+    padding-left: 15%;
     padding-top: 15px;
     padding-bottom: 25px;
+
         .logo{
             font-family: 'Shrikhand', sans-serif;
             font-size: 1.1em;
@@ -29,4 +30,22 @@ footer{
         & p{
             margin: 5px 0px;
         }
+}
+.footer{
+    display: flex;
+    justify-content: flex-start;
+
+    &_block.last{
+        padding-left: 30%;
+        }
+}
+/*responsive mobile*/
+@media all and (max-width: 667px){
+.footer{
+    display: block;
+}
+.footer_block.last{
+        padding-left: 20px;
+        }
+
 }

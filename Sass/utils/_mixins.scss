@@ -1,5 +1,4 @@
 @mixin h1{
-    font-size: 1.6em;
     font-weight: 600;
     width: 70%;
     margin: 0;
@@ -9,7 +8,8 @@
     background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
 }
 @mixin heart_fill{
-    background: (linear-gradient(180deg, $color-primary 0%, $color-secondary 100%)) no-repeat;
+    background-image: (linear-gradient(to top, $color-primary 0%, $color-secondary 50%, transparent 50%));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }

@@ -1,0 +1,201 @@
+/******************Page Menu La palette du goût***************/
+.header_menu{
+    position: relative;
+    .fa-arrow-left{
+        position: absolute;
+        font-size: 1.2em;
+        top: 30%;
+        left: 5%;
+    }
+    & a{
+        text-decoration: none;
+        color: black;
+    }
+}
+/****** section presentation_menu ******/
+#container_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-functionalities-back;
+    position: absolute;
+    border-radius: 35px 35px 0px 0px;
+    width: 100%;
+    top: 250px;
+    z-index: 1;
+    padding-bottom: 30px;
+}
+#presentation_menu img{
+        width: 100%;
+        height: 220px;
+        position: relative;
+        z-index: 0;
+        object-fit: cover;
+}
+.presentation_menu_name_restaurant{
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+    width: 90%;
+
+    & h1{
+        font-family: 'Shrikhand', sans-serif;
+        padding: 0;
+        font-size: 1.9em;
+    }
+}
+.menu_restaurant{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    & h2{
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    & p{
+        text-align: center;
+    }
+}
+.underline{
+    border-top: 2px solid $color-tertiary;
+    width: 35px;
+    margin-bottom: 15px;
+}
+.menu{
+    margin: 0px 0px 15px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.dish_block{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    &.entree{
+    animation: menu_apparition 2500ms 200ms both ease-in-out;
+    }
+
+    &.meal{
+    animation: menu_apparition 2500ms 2600ms both ease-in-out;
+    }
+
+    &.dessert{
+    animation: menu_apparition 2500ms 5000ms both ease-in-out;
+    }
+}
+.check{
+    background-color: $color-tertiary;
+    border-radius: 15px;
+    z-index: -1;
+    margin: 15px 0px;
+    height: 74px;
+    width: 100%;
+
+    &:hover{
+        cursor: grab;
+    }
+    & .fa-check-circle{
+        z-index: -1;
+        color: white;
+        font-size: 1.4em;
+        position: relative;
+        right: -95%;
+        top: 25px;
+    }
+    & .dish{
+        background-color: $color-functionalities-back;
+        box-shadow: $color-button-shadow 2px 5px 20px;
+        border-radius: 15px;
+        padding: 15px 20px;
+        margin: 0px;
+        position: relative;
+        top: -23px;
+        z-index: 1;
+        animation: all 2000ms backwards ease-in;
+
+        &:hover{
+            cursor: grab;
+            border-radius: 15px 0px 0px 15px;
+            width: 80%;
+        }
+
+        &_name{
+            max-width: 350px;
+            padding-right: 60px;
+            display: block;
+            position: relative;
+            z-index: 1;
+            
+            & p{
+                text-align: left;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    &_price{
+        display: block;
+        font-weight: 500;
+        font-size: 0.9em;
+        background: $color-functionalities-back;
+        padding: 20px 10px 0px 5px;
+        position: absolute;
+        z-index: 2;
+        right: 10px;
+        top: 15px;
+        width: 30px;
+    }
+}
+    & p{
+        margin: 5px 0px 0px 0px;
+        font-weight: 300;
+        font-size: 0.8em;
+    }
+    & .span{
+        font-weight: 500;
+        font-size: 1em;
+    }
+}
+/*responsive mobile*/
+@media all and (max-width: 847px)
+{
+.presentation_menu_name_restaurant{
+        justify-content: space-between;
+}
+.menu_restaurant{
+    align-items: flex-start;
+
+    &:last-child{
+    align-items: center;
+    }
+}
+.underline{
+    margin-bottom: 5px;
+}
+.dish_block{
+    width: 90%;
+}
+.check{
+    height: 64px;
+    
+    .dish{
+    padding: 10px 15px;
+    }
+    & .fa-check-circle{
+        right: -90%;
+        top: 20px;
+    }
+}
+.presentation_menu_name_restaurant h1{
+    font-size: 1.6em;
+}
+.menu_restaurant h2{
+    font-size: 0.9em;
+}
+}
