@@ -18,25 +18,23 @@
     flex-direction: column;
     align-items: center;
     background-color: $color-functionalities-back;
-    position: absolute;
-    border-radius: 35px 35px 0px 0px;
     width: 100%;
     top: 250px;
-    z-index: 1;
     padding-bottom: 30px;
 }
 #presentation_menu img{
         width: 100%;
         height: 220px;
-        position: relative;
-        z-index: 0;
         object-fit: cover;
 }
 .presentation_menu_name_restaurant{
     display: flex;
     justify-content: center;
     padding: 30px 20px;
-    width: 90%;
+    width: calc(100% - 40px);
+    background-color: $color-functionalities-back;
+    margin-top: -30px;
+    border-radius: 35px 35px 0px 0px;
 
     & h1{
         font-family: 'Shrikhand', sans-serif;
@@ -89,48 +87,67 @@
     animation: menu_apparition 2500ms 5000ms both ease-in-out;
     }
 }
-.check{
-    background-color: $color-tertiary;
+.dish_card{
     border-radius: 15px;
-    z-index: -1;
-    margin: 15px 0px;
+    margin: 15px 15px;
     height: 74px;
-    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: $color-button-shadow 2px 5px 20px;
+    box-sizing:content-box;
+    overflow: hidden;
+
+    &_box{
+        width: 100%;
+    }
 
     &:hover{
         cursor: grab;
     }
-    & .fa-check-circle{
-        z-index: -1;
+    & .fa-check-circle::before{
+        content: '\f058';
+        background-color: $color-tertiary;
+        display: flex;
         color: white;
         font-size: 1.4em;
-        position: relative;
-        right: -95%;
-        top: 25px;
+        position: absolute;
+        right: -20%;
+        top: 15px;
+        height: 74px;
+        width: 15%;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        z-index: 2;
+        transform: translateX(0);
     }
     & .dish{
+        display: flex;
+        justify-content: flex-start;
         background-color: $color-functionalities-back;
-        box-shadow: $color-button-shadow 2px 5px 20px;
         border-radius: 15px;
         padding: 15px 20px;
         margin: 0px;
         position: relative;
-        top: -23px;
         z-index: 1;
-        animation: all 2000ms backwards ease-in;
+        width: 100%;
+        box-sizing: border-box;
+        
 
         &:hover{
-            cursor: grab;
-            border-radius: 15px 0px 0px 15px;
-            width: 80%;
+            animation: dish_animation 2000ms both ease-in-out;
+            &::after{
+                animation: dish_animation_after 2000ms both ease-in-out;
+            }
+            & .fa-check-circle::before{
+                animation: dish_card_circle_animation 2000ms both ease-in-out;
+            }
         }
-
         &_name{
             max-width: 350px;
             padding-right: 60px;
             display: block;
             position: relative;
-            z-index: 1;
             
             & p{
                 text-align: left;
@@ -146,7 +163,6 @@
         background: $color-functionalities-back;
         padding: 20px 10px 0px 5px;
         position: absolute;
-        z-index: 2;
         right: 10px;
         top: 15px;
         width: 30px;
@@ -181,7 +197,7 @@
 .dish_block{
     width: 90%;
 }
-.check{
+.dish_card{
     height: 64px;
     
     .dish{

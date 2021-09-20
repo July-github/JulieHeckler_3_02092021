@@ -8,7 +8,7 @@
     background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
 }
 @mixin heart_fill{
-    background-image: (linear-gradient(to top, $color-primary 0%, $color-secondary 50%, transparent 50%));
+    background-image: linear-gradient(to bottom, $color-primary 0%, $color-secondary 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

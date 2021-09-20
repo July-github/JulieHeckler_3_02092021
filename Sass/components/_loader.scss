@@ -15,7 +15,7 @@
     -webkit-background-clip: text;
     background-image: linear-gradient(to top, $color-tertiary 60%, transparent 40%);
     background-size: 2% 40%;
-    animation: loader 8000ms 100ms forwards ease-in-out;
+    animation: loader 5000ms 100ms forwards ease-in-out;
     opacity: 1;
 }
 .page{
@@ -26,5 +26,5 @@
     position: absolute;
     z-index: 2;
     opacity: 0;
-    animation: page_loader 8100ms forwards;
+    animation: page_loader 5100ms forwards;
 }

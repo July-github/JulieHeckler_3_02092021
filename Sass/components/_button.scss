@@ -100,17 +100,32 @@
 }   
 }
 /****like button****/
+.button_like{
+    display: flex;
+    align-items: center;
+}
 .fas.fa-heart{
     -webkit-text-stroke: 1px black;
     font-size: 1.5em;
-    @include heart_fill;
-    transform-origin: bottom;
-    background-position: -100% -100%;
-    background-size: 2% 100%;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    color: transparent;
+    
+    &::after{
+        content: '\f004';
+        position: absolute;
+        align-items: center;
+        @include heart_fill;
+        opacity: 0;
+    }
 
     &:hover{
         cursor: grab;
-        animation: button_like_fill 5000ms 100ms forwards ease-in-out;
-        -webkit-animation: button_like_fill 5000ms 100ms forwards ease-in-out;
+
+        &::after{
+            animation: button_like_fill 3000ms 100ms forwards ease-in-out;
+        }
     }
 }
