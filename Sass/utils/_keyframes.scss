@@ -76,38 +76,68 @@
         opacity: 0;
     }
 }
-@keyframes dish_animation_after{
+@keyframes dish_animation_price_bigscreen{
     0%{
-        width: 0%;
-        border-radius: 0px 15px 15px 0px;
-        right: 0;
+        transform: translateX(0);
     }
     100%{
-        width: 25%;
-        border-radius: 0px 15px 15px 0px;
-        right: -25%;
+        transform: translateX(-250%);
     }
 }
-@keyframes dish_animation{
+@keyframes dish_animation_price_desktop{
     0%{
-        border-radius: 15px 0px 0px 15px;
-        width: 100%;
+        transform: translateX(0);
     }
     100%{
-        border-radius: 15px 0px 0px 15px;
-        width: 80%;
+        transform: translateX(-220%);
     }
 }
-@keyframes dish_card_circle_animation{
+@keyframes dish_animation_price_tablette{
     0%{
-        color: violet;
-        opacity: 1;
-        transform: translateX(-20%);
+        transform: translateX(0);
     }
     100%{
-        color: violet;
-        opacity: 1;
+        transform: translateX(-200%);
+    }
+}
+@keyframes dish_animation_price_mobile{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-170%);
+    }
+}
+@keyframes dish_animation_price_smallmobile{
+    0%{
+        transform: width(100%);
+    }
+    100%{
+        transform: width(80%);
+    }
+}
+@keyframes dish_card_circle_translate{
+    0%{
         transform: translateX(0%);
-
+    }
+    100%{
+        transform: translateX(-99%);
+    }
+}
+@keyframes dish_card_circle_rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+    20%{
+        transform: rotate(180deg);
+    }
+    40%{
+        transform: rotate(180deg);
+    }
+    60%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0);
     }
 }

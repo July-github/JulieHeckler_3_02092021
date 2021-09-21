@@ -14,7 +14,6 @@ body{
 }
 #main_page
 {
-    max-width: 1400px;
     margin: 0 auto;
 }
 /****header*****/
@@ -52,6 +51,7 @@ header img{
 
     h1{
         @include h1;
+        width: 100%;
         text-align: center;
     }
     & p{
@@ -67,42 +67,59 @@ header img{
 }
 /****section functionalities of the website****/
 #website_functionalities{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 30px 0px;
-    }
+}
 h1{
     @include h1;
+    width: 100%;
     font-size: 1.6em;
     padding: 0px 20px;
-    }
+}
 .functionalities{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
-    }
+    width: 100%;
+    max-width: 1600px;
+}
+.button_functionalities_instruction{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+}
 /*responsive mobile*/
 @media all and (max-width: 847px){
 .functionalities{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 30px;
 }
 }
 /****section restaurants****/
 #presentation_restaurants{
     padding: 60px 0px;
     background-color: $color-functionalities-back;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #presentation_restaurants_cartes{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 10px 0px;
+    max-width: 1600px;
+    width: 100%;
 }
 h1{
     @include h1;
+    width: 100%;
     padding: 0px 20px;
 }
 .block_carte_restaurant{
@@ -175,7 +192,6 @@ h1{
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
-    padding: 10px 20px;
     }
 .block_carte_restaurant{
     margin: 10px;
