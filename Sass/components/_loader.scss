@@ -12,10 +12,11 @@
     z-index: 2;
     margin: 0;
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /**For Chrome**/
     background-image: linear-gradient(to top, $color-tertiary 60%, transparent 40%);
-    background-size: 2% 40%;
+    background-size: 1% 40%;
     animation: loader 5000ms 100ms forwards ease-in-out;
+    -webkit-animation: loader 5000ms 100ms forwards ease-in-out;
     opacity: 1;
 }
 .page{
@@ -27,4 +28,5 @@
     z-index: 2;
     opacity: 0;
     animation: page_loader 5100ms forwards;
+    -webkit-animation: page_loader 5100ms forwards;
 }

@@ -12,7 +12,8 @@
     cursor: pointer;
     color: white;
     transition: all 400ms;
-    &:hover{
+    /**Lightened color on hover**/
+    &:hover, :active{
         filter: brightness(120%);
         cursor: grab;
         box-shadow: darken($color-button-shadow, 40%) 3px 5px 7px;
@@ -45,13 +46,11 @@
         font-weight: 600;
         text-align: center;
     }
-
     .fas{
         margin: 15px;
         color: $color-button-fas;
         font-size: 1.2em;
     }
-
     & .number_button_functionalities{
         position: absolute;
         top: 35%;
@@ -67,8 +66,10 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        color: black;
     }
-    &:hover{
+    /**Primary color on hover**/
+    &:hover, :active{
         cursor: grab;
         background-color: lighten($color-primary, 35%);
         .fas{
@@ -100,7 +101,6 @@
         top: 35%;
         left: -10px;
     }
-
     & .button_functionalities_instruction{
         flex-direction: row;
     }
@@ -120,17 +120,15 @@
     align-items: center;
     color: transparent;
     
-    &::after{
+    &::after{/****Button creation without modifying html for a background-color appearance on hover****/
         content: '\f004';
         position: absolute;
         align-items: center;
         @include heart_fill;
         opacity: 0;
     }
-
-    &:hover{
+    &:hover, :active{
         cursor: grab;
-
         &::after{
             animation: button_like_fill 3000ms 100ms forwards ease-in-out;
         }

@@ -31,9 +31,9 @@
     display: flex;
     justify-content: center;
     padding: 30px 20px;
-    width: calc(100% - 40px);
+    width: calc(100% - 40px);    /**Width decreased by padding inline**/
     background-color: $color-functionalities-back;
-    margin-top: -30px;
+    margin-top: -35px;
     border-radius: 35px 35px 0px 0px;
 
     & h1{
@@ -48,7 +48,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1600px;
+    max-width: $max-width;
     
     & h2{
         text-transform: uppercase;
@@ -77,16 +77,15 @@
     flex-direction: column;
     width: 60%;
 
+    /**Slow & slight apparition of the 3 blocks from bottom to top**/
     &.entree{
-    animation: menu_apparition 2500ms 200ms both ease-in-out;
+        animation: menu_apparition 2500ms 200ms both ease-in-out;
     }
-
     &.meal{
-    animation: menu_apparition 2500ms 2600ms both ease-in-out;
+        animation: menu_apparition 2500ms 2600ms both ease-in-out;
     }
-
     &.dessert{
-    animation: menu_apparition 2500ms 5000ms both ease-in-out;
+        animation: menu_apparition 2500ms 5000ms both ease-in-out;
     }
 }
 .dish_card{
@@ -99,11 +98,12 @@
     overflow: hidden;
     z-index: 1;
 
-    &:hover{
+    /**Reduced width to make appear the check box on the right**/
+    &:hover, :active{
         .dish{
             width: 80%;
+        }
     }
-}
 
     &_box{
         width: 100%;
@@ -148,13 +148,12 @@
             min-width: 75%;
             position: sticky;
             display: block;
+
             & p{
                 text-align: left;
                 text-overflow: ellipsis;
-            
-            overflow: hidden;
-            white-space: nowrap;
-            
+                overflow: hidden;
+                white-space: nowrap;
             }
         }
     &_price{
@@ -176,7 +175,8 @@
         font-weight: 500;
         font-size: 1em;
     }
-    &:hover{
+    /**Apparition of the check box with a rotating icon**/
+    &:hover, :active{
         cursor: grab;
         
         & .fa-check-circle{
@@ -187,11 +187,6 @@
             transition: transform 1000ms ease-in-out;
         }
     }
-}
-/*responsive desktop*/
-@media all and (max-width: 1200px)
-{
-
 }
 /*responsive tablette*/
 @media all and (max-width: 1044px)
@@ -204,7 +199,7 @@
 @media all and (max-width: 764px)
 {
 .presentation_menu_name_restaurant{
-        justify-content: space-between;
+    justify-content: space-between;
 }
 .menu_restaurant{
     align-items: flex-start;
@@ -231,6 +226,6 @@
 @media all and (max-width: 647px)
 {
 .dish_block{
-    width: 80%;
+    width: 90%;
 }
 }

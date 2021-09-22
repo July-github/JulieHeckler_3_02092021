@@ -54,7 +54,7 @@
     }
     99.9%{
         opacity: 1;
-        z-index: 2;
+        z-index: 2;/**The loading spinner has to stay until the end of the animation**/
         transform: rotateY(740deg);
     }
     100%{
@@ -69,7 +69,7 @@
     }
     99.9%{
         opacity: 1;
-        z-index: 2;
+        z-index: 2;/**The white page has to stay until the loading spinner disappear**/
     }
     100%{
         z-index: -11;
