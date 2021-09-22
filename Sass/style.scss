@@ -86,15 +86,11 @@ h1{
     margin-bottom: 30px;
     width: 100%;
     max-width: 1600px;
-}
-.button_functionalities_instruction{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+    padding: 0px 15px;
+    box-sizing: border-box;
 }
 /*responsive mobile*/
-@media all and (max-width: 847px){
+@media all and (max-width: 764px){
 .functionalities{
     display: flex;
     flex-direction: column;

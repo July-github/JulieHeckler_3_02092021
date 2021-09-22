@@ -1,4 +1,4 @@
-/******************Page Menu La palette du goût***************/
+/******************Page Menu***************/
 .header_menu{
     position: relative;
     .fa-arrow-left{
@@ -24,7 +24,7 @@
 }
 #presentation_menu img{
         width: 100%;
-        height: 220px;
+        height: 260px;
         object-fit: cover;
 }
 .presentation_menu_name_restaurant{
@@ -99,6 +99,12 @@
     overflow: hidden;
     z-index: 1;
 
+    &:hover{
+        .dish{
+            width: 80%;
+    }
+}
+
     &_box{
         width: 100%;
         position: relative;
@@ -136,22 +142,27 @@
         box-sizing: border-box;
         position: absolute;
         transform-origin: left;
-        transition: width 2000ms ease-in-out;
+        transition: width 900ms ease-in-out;
 
         &_name{
-            max-width: 250px;
+            min-width: 75%;
+            position: sticky;
+            display: block;
             & p{
                 text-align: left;
                 text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
+            
+            overflow: hidden;
+            white-space: nowrap;
+            
             }
         }
     &_price{
+        display: block;
         font-weight: 500;
         font-size: 0.9em;
         background: $color-functionalities-back;
-        padding: 0;
+        padding: 0px 0px 0px 5px;
         align-self: flex-end;
         min-width: 30px;
     }
@@ -169,11 +180,11 @@
         cursor: grab;
         
         & .fa-check-circle{
-            animation: dish_card_circle_translate 2000ms both ease-in-out;
+            animation: dish_card_circle_translate 1000ms both ease-in-out;
         }
         & .far.fa-check-circle::before{
             transform: rotate(1080deg);
-            transition: transform 2000ms ease-in-out 100ms;
+            transition: transform 1000ms ease-in-out;
         }
     }
 }
@@ -221,11 +232,5 @@
 {
 .dish_block{
     width: 80%;
-}
-.dish_card:hover{
-    & .dish{
-        width: 80%;
-    }
-    
 }
 }

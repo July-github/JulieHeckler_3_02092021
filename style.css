@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /******************Accueil***************/
 @keyframes menu_apparition {
   0% {
@@ -76,46 +75,6 @@
   100% {
     z-index: -11;
     opacity: 0;
-  }
-}
-@keyframes dish_animation_price_bigscreen {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-250%);
-  }
-}
-@keyframes dish_animation_price_desktop {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-220%);
-  }
-}
-@keyframes dish_animation_price_tablette {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
-@keyframes dish_animation_price_mobile {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-170%);
-  }
-}
-@keyframes dish_animation_price_smallmobile {
-  0% {
-    transform: width(100%);
-  }
-  100% {
-    transform: width(80%);
   }
 }
 @keyframes dish_card_circle_translate {
@@ -222,6 +181,7 @@
   border: none;
   font-size: 1em;
   font-weight: 600;
+  text-align: center;
 }
 .button_functionalities .fas {
   margin: 15px;
@@ -237,6 +197,12 @@
   padding: 4px 8.5px;
   border-radius: 50px;
   font-size: 0.9em;
+}
+.button_functionalities_instruction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .button_functionalities:hover {
   cursor: grab;
@@ -259,7 +225,7 @@
     align-items: center;
   }
 }
-@media all and (max-width: 847px) {
+@media all and (max-width: 764px) {
   .button_functionalities {
     width: 90%;
     margin: 15px 0px;
@@ -269,7 +235,7 @@
     left: -10px;
   }
   .button_functionalities .button_functionalities_instruction {
-    display: block;
+    flex-direction: row;
   }
 }
 /****like button****/
@@ -354,7 +320,7 @@ footer p {
     padding-left: 20px;
   }
 }
-/******************Page Menu La palette du goût***************/
+/******************Page Menu***************/
 .header_menu {
   position: relative;
 }
@@ -382,7 +348,7 @@ footer p {
 
 #presentation_menu img {
   width: 100%;
-  height: 220px;
+  height: 260px;
   object-fit: cover;
 }
 
@@ -458,6 +424,9 @@ footer p {
   overflow: hidden;
   z-index: 1;
 }
+.dish_card:hover .dish {
+  width: 80%;
+}
 .dish_card_box {
   width: 100%;
   position: relative;
@@ -494,10 +463,12 @@ footer p {
   box-sizing: border-box;
   position: absolute;
   transform-origin: left;
-  transition: width 2000ms ease-in-out;
+  transition: width 900ms ease-in-out;
 }
 .dish_card .dish_name {
-  max-width: 250px;
+  min-width: 75%;
+  position: sticky;
+  display: block;
 }
 .dish_card .dish_name p {
   text-align: left;
@@ -506,10 +477,11 @@ footer p {
   white-space: nowrap;
 }
 .dish_card .dish_price {
+  display: block;
   font-weight: 500;
   font-size: 0.9em;
   background: #F6F6F6;
-  padding: 0;
+  padding: 0px 0px 0px 5px;
   align-self: flex-end;
   min-width: 30px;
 }
@@ -526,11 +498,11 @@ footer p {
   cursor: grab;
 }
 .dish_card:hover .fa-check-circle {
-  animation: dish_card_circle_translate 2000ms both ease-in-out;
+  animation: dish_card_circle_translate 1000ms both ease-in-out;
 }
 .dish_card:hover .far.fa-check-circle::before {
   transform: rotate(1080deg);
-  transition: transform 2000ms ease-in-out 100ms;
+  transition: transform 1000ms ease-in-out;
 }
 
 /*responsive desktop*/
@@ -571,10 +543,6 @@ footer p {
 }
 @media all and (max-width: 647px) {
   .dish_block {
-    width: 80%;
-  }
-
-  .dish_card:hover .dish {
     width: 80%;
   }
 }
@@ -668,17 +636,12 @@ h1 {
   margin-bottom: 30px;
   width: 100%;
   max-width: 1600px;
-}
-
-.button_functionalities_instruction {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  padding: 0px 15px;
+  box-sizing: border-box;
 }
 
 /*responsive mobile*/
-@media all and (max-width: 847px) {
+@media all and (max-width: 764px) {
   .functionalities {
     display: flex;
     flex-direction: column;
