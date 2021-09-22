@@ -80,12 +80,15 @@
     /**Slow & slight apparition of the 3 blocks from bottom to top**/
     &.entree{
         animation: menu_apparition 2500ms 200ms both ease-in-out;
+        -webkit-animation: menu_apparition 2500ms 200ms both ease-in-out;
     }
     &.meal{
         animation: menu_apparition 2500ms 2600ms both ease-in-out;
+        -webkit-animation: menu_apparition 2500ms 2600ms both ease-in-out;
     }
     &.dessert{
         animation: menu_apparition 2500ms 5000ms both ease-in-out;
+        -webkit-animation: menu_apparition 2500ms 5000ms both ease-in-out;
     }
 }
 .dish_card{
@@ -99,7 +102,7 @@
     z-index: 1;
 
     /**Reduced width to make appear the check box on the right**/
-    &:hover, :focus{
+    &:hover, :focus, :active, :active{
         .dish{
             width: 80%;
         }
@@ -143,6 +146,7 @@
         position: absolute;
         transform-origin: left;
         transition: width 900ms ease-in-out;
+        -webkit-transition: width 900ms ease-in-out;
 
         &_name{
             min-width: 75%;
@@ -176,15 +180,17 @@
         font-size: 1em;
     }
     /**Apparition of the check box with a rotating icon**/
-    &:hover, :focus{
+    &:hover, :focus, :active, :active{
         cursor: grab;
         
         & .fa-check-circle{
             animation: dish_card_circle_translate 1000ms both ease-in-out;
+            -webkit-animation: dish_card_circle_translate 1000ms both ease-in-out;
         }
         & .far.fa-check-circle::before{
             transform: rotate(1080deg);
             transition: transform 1000ms ease-in-out;
+            -webkit-transition: transform 1000ms ease-in-out;
         }
     }
 }

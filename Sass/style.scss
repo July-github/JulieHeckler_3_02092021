@@ -142,6 +142,7 @@ h1{
     border-radius: 15px 15px 15px 15px;
     transform: scale(1);
     transition: all 400ms;
+    -webkit-transition: all 400ms;
 
     & img{
         width: 100%;
@@ -176,9 +177,10 @@ h1{
             }
     }
     /**Slightly magnifying animation on hover**/
-    &:hover, :focus{
+    &:hover, :focus, :active{
         transform: scale(1.04);
         transition: transform 400ms;
+        -webkit-transition: transform 400ms;
         box-shadow: darken($color-button-shadow, 40%) 3px 5px 7px;
     }
 }
