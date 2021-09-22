@@ -51,7 +51,6 @@
   }
   80% {
     background-position: center 50%;
-    transform: rotateY(0deg);
   }
   99.9% {
     opacity: 1;
@@ -156,7 +155,7 @@
   transition: all 400ms;
   /**Lightened color on hover**/
 }
-.button:hover, .button :active {
+.button:hover, .button :focus {
   filter: brightness(120%);
   cursor: grab;
   box-shadow: #6b6b6b 3px 5px 7px;
@@ -212,11 +211,11 @@
   width: 100%;
   color: black;
 }
-.button_functionalities:hover, .button_functionalities :active {
+.button_functionalities:hover, .button_functionalities :focus {
   cursor: grab;
   background-color: #f2eafb;
 }
-.button_functionalities:hover .fas, .button_functionalities :active .fas {
+.button_functionalities:hover .fas, .button_functionalities :focus .fas {
   color: #9356DC;
 }
 
@@ -272,10 +271,10 @@
   -webkit-text-fill-color: transparent;
   opacity: 0;
 }
-.fas.fa-heart:hover, .fas.fa-heart :active {
+.fas.fa-heart:hover, .fas.fa-heart :focus {
   cursor: grab;
 }
-.fas.fa-heart:hover::after, .fas.fa-heart :active::after {
+.fas.fa-heart:hover::after, .fas.fa-heart :focus::after {
   animation: button_like_fill 3000ms 100ms forwards ease-in-out;
 }
 
@@ -437,7 +436,7 @@ footer p {
   /**Reduced width to make appear the check box on the right**/
   /**Apparition of the check box with a rotating icon**/
 }
-.dish_card:hover .dish, .dish_card :active .dish {
+.dish_card:hover .dish, .dish_card :focus .dish {
   width: 80%;
 }
 .dish_card_box {
@@ -507,13 +506,13 @@ footer p {
   font-weight: 500;
   font-size: 1em;
 }
-.dish_card:hover, .dish_card :active {
+.dish_card:hover, .dish_card :focus {
   cursor: grab;
 }
-.dish_card:hover .fa-check-circle, .dish_card :active .fa-check-circle {
+.dish_card:hover .fa-check-circle, .dish_card :focus .fa-check-circle {
   animation: dish_card_circle_translate 1000ms both ease-in-out;
 }
-.dish_card:hover .far.fa-check-circle::before, .dish_card :active .far.fa-check-circle::before {
+.dish_card:hover .far.fa-check-circle::before, .dish_card :focus .far.fa-check-circle::before {
   transform: rotate(1080deg);
   transition: transform 1000ms ease-in-out;
 }
@@ -743,7 +742,7 @@ h1 {
 .carte_restaurant .carte_restaurant_infos p {
   margin: 0;
 }
-.carte_restaurant:hover, .carte_restaurant :active {
+.carte_restaurant:hover, .carte_restaurant :focus {
   transform: scale(1.04);
   transition: transform 400ms;
   box-shadow: #6b6b6b 3px 5px 7px;
