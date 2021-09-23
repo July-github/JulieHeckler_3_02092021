@@ -102,7 +102,7 @@
     z-index: 1;
 
     /**Reduced width to make appear the check box on the right**/
-    &:hover, :focus{
+    &:hover, :active{
         .dish{
             width: 80%;
         }
@@ -179,7 +179,7 @@
         font-size: 1em;
     }
     /**Apparition of the check box with a rotating icon**/
-    &:hover, :focus{
+    &:hover, :active{
         cursor: grab;
         
         & .fa-check-circle{
