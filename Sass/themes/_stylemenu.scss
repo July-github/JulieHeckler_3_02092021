@@ -101,12 +101,7 @@
     overflow: hidden;
     z-index: 1;
 
-    /**Reduced width to make appear the check box on the right**/
-    &:hover{
-        .dish{
-            width: 80%;
-        }
-    }
+    
     &_box{
         width: 100%;
         position: relative;
@@ -178,8 +173,17 @@
         font-weight: 500;
         font-size: 1em;
     }
+}
+
+@media(hover: hover) and (pointer: fine){
+    /**Reduced width to make appear the check box on the right**/
+    .dish_card:hover{
+        .dish{
+            width: 80%;
+        }
+    }
     /**Apparition of the check box with a rotating icon**/
-    &:hover{
+    .dish_card:hover{
         cursor: grab;
         
         & .fa-check-circle{
