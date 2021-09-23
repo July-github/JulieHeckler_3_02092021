@@ -1,15 +1,9 @@
 @keyframes menu_apparition{
     0%{
-        transform: translateY(5px);
+        transform: translateY(15px);
         opacity: 0;
     }
-    30%{
-        transform: translateY(4px);
-    }
-    65%{
-        transform: translateY(2.5px);
-        opacity: .6;
-    }
+    
     100%{
         transform: translateY(0px);
         opacity: 1;
@@ -50,6 +44,7 @@
     }
     80%{
         background-position: center 50%;
+        transform: rotateY(0deg);
     }
     99.9%{
         opacity: 1;

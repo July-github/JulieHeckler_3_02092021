@@ -12,8 +12,9 @@
     cursor: pointer;
     color: white;
     transition: all 400ms;
+    -webkit-transition: all 400ms;
     /**Lightened color on hover**/
-    &:hover, :focus{
+    &:hover{
         filter: brightness(120%);
         cursor: grab;
         box-shadow: darken($color-button-shadow, 40%) 3px 5px 7px;
@@ -33,6 +34,7 @@
     text-align: left;
     position: relative;
     transition: all 400ms;
+    -webkit-transition: all 400ms;
     width: 25%;
     margin: 0 20px;
 
@@ -69,7 +71,7 @@
         color: black;
     }
     /**Primary color on hover**/
-    &:hover, :focus{
+    &:hover{
         cursor: grab;
         background-color: lighten($color-primary, 35%);
         .fas{
@@ -127,10 +129,11 @@
         @include heart_fill;
         opacity: 0;
     }
-    &:hover, :focus{
+    &:hover{
         cursor: grab;
         &::after{
             animation: button_like_fill 3000ms 100ms forwards ease-in-out;
+            -webkit-animation: button_like_fill 3000ms 100ms forwards ease-in-out;
         }
     }
 }
