@@ -175,7 +175,7 @@
     }
 }
 
-@media(hover: hover) and (pointer: fine){
+@media(hover: hover) and (pointer:coarse){
     /**Reduced width to make appear the check box on the right**/
     .dish_card:hover{
         .dish{
