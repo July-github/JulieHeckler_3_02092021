@@ -102,12 +102,11 @@
     z-index: 1;
 
     /**Reduced width to make appear the check box on the right**/
-    &:hover, :focus, :active, :active{
+    &:hover, :focus{
         .dish{
             width: 80%;
         }
     }
-
     &_box{
         width: 100%;
         position: relative;
@@ -160,16 +159,16 @@
                 white-space: nowrap;
             }
         }
-    &_price{
-        display: block;
-        font-weight: 500;
-        font-size: 0.9em;
-        background: $color-functionalities-back;
-        padding: 0px 0px 0px 5px;
-        align-self: flex-end;
-        min-width: 30px;
+        &_price{
+            display: block;
+            font-weight: 500;
+            font-size: 0.9em;
+            background: $color-functionalities-back;
+            padding: 0px 0px 0px 5px;
+            align-self: flex-end;
+            min-width: 30px;
+        }
     }
-}
     & p{
         margin: 5px 0px 0px 0px;
         font-weight: 300;
@@ -180,7 +179,7 @@
         font-size: 1em;
     }
     /**Apparition of the check box with a rotating icon**/
-    &:hover, :focus, :active, :active{
+    &:hover, :focus{
         cursor: grab;
         
         & .fa-check-circle{
