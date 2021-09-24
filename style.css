@@ -154,6 +154,7 @@
   filter: brightness(120%);
   cursor: grab;
   box-shadow: #6b6b6b 3px 5px 7px;
+  outline: none;
 }
 .button .pres_restaurants {
   margin: 15px 0px;
@@ -209,10 +210,12 @@
 }
 .button_functionalities:hover, .button_functionalities :focus {
   cursor: grab;
+  outline: none;
   background-color: #f2eafb;
 }
 .button_functionalities:hover .fas, .button_functionalities :focus .fas {
   color: #9356DC;
+  outline: none;
 }
 
 /*Responsive tablette*/
@@ -269,10 +272,12 @@
 }
 .fas.fa-heart:hover, .fas.fa-heart :focus {
   cursor: grab;
+  outline: none;
 }
 .fas.fa-heart:hover::after, .fas.fa-heart :focus::after {
   animation: button_like_fill 3000ms 100ms forwards ease-in-out;
   -webkit-animation: button_like_fill 3000ms 100ms forwards ease-in-out;
+  outline: none;
 }
 
 footer {
@@ -438,6 +443,7 @@ footer p {
 }
 .dish_card:hover .dish, .dish_card :focus .dish {
   width: 80%;
+  outline: none;
 }
 .dish_card_box {
   width: 100%;
@@ -509,15 +515,18 @@ footer p {
 }
 .dish_card:hover, .dish_card :focus {
   cursor: grab;
+  outline: none;
 }
 .dish_card:hover .fa-check-circle, .dish_card :focus .fa-check-circle {
   animation: dish_card_circle_translate 1000ms both ease-in-out;
   -webkit-animation: dish_card_circle_translate 1000ms both ease-in-out;
+  outline: none;
 }
 .dish_card:hover .far.fa-check-circle::before, .dish_card :focus .far.fa-check-circle::before {
   transform: rotate(1080deg);
   transition: transform 1000ms ease-in-out;
   -webkit-transition: transform 1000ms ease-in-out;
+  outline: none;
 }
 
 /*responsive tablette*/
@@ -720,6 +729,7 @@ h1 {
   transition: transform 400ms;
   -webkit-transition: transform 400ms;
   box-shadow: #6b6b6b 3px 5px 7px;
+  outline: none;
 }
 .carte_restaurant img {
   width: 100%;

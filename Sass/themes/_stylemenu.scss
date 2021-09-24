@@ -105,6 +105,7 @@
     &:hover, :focus{
         .dish{
             width: 80%;
+            outline: none;
         }
     }
     &_box{
@@ -181,15 +182,18 @@
     /**Apparition of the check box with a rotating icon**/
     &:hover, :focus{
         cursor: grab;
+        outline: none;
         
         & .fa-check-circle{
             animation: dish_card_circle_translate 1000ms both ease-in-out;
             -webkit-animation: dish_card_circle_translate 1000ms both ease-in-out;
+            outline: none;
         }
         & .far.fa-check-circle::before{
             transform: rotate(1080deg);
             transition: transform 1000ms ease-in-out;
             -webkit-transition: transform 1000ms ease-in-out;
+            outline: none;
         }
     }
 }
