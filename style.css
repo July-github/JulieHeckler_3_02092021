@@ -1,34 +1,4 @@
 /******************Accueil***************/
-@keyframes menu_apparition {
-  0% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-@keyframes button_like_fill {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.2;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  60% {
-    opacity: 0.7;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes loader {
   0% {
     background-position: center 70%;
@@ -70,6 +40,36 @@
   100% {
     z-index: -11;
     opacity: 0;
+  }
+}
+@keyframes menu_apparition {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes button_like_fill {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes dish_card_circle_translate {
@@ -150,7 +150,7 @@
   -webkit-transition: all 400ms;
   /**Lightened color on hover**/
 }
-.button:hover {
+.button:hover, .button :focus {
   filter: brightness(120%);
   cursor: grab;
   box-shadow: #6b6b6b 3px 5px 7px;
@@ -207,11 +207,11 @@
   width: 100%;
   color: black;
 }
-.button_functionalities:hover {
+.button_functionalities:hover, .button_functionalities :focus {
   cursor: grab;
   background-color: #f2eafb;
 }
-.button_functionalities:hover .fas {
+.button_functionalities:hover .fas, .button_functionalities :focus .fas {
   color: #9356DC;
 }
 
@@ -267,10 +267,10 @@
   -webkit-text-fill-color: transparent;
   opacity: 0;
 }
-.fas.fa-heart:hover {
+.fas.fa-heart:hover, .fas.fa-heart :focus {
   cursor: grab;
 }
-.fas.fa-heart:hover::after {
+.fas.fa-heart:hover::after, .fas.fa-heart :focus::after {
   animation: button_like_fill 3000ms 100ms forwards ease-in-out;
   -webkit-animation: button_like_fill 3000ms 100ms forwards ease-in-out;
 }
@@ -436,7 +436,7 @@ footer p {
   /**Reduced width to make appear the check box on the right**/
   /**Apparition of the check box with a rotating icon**/
 }
-.dish_card:hover .dish {
+.dish_card:hover .dish, .dish_card :focus .dish {
   width: 80%;
 }
 .dish_card_box {
@@ -507,14 +507,14 @@ footer p {
   font-weight: 500;
   font-size: 1em;
 }
-.dish_card:hover {
+.dish_card:hover, .dish_card :focus {
   cursor: grab;
 }
-.dish_card:hover .fa-check-circle {
+.dish_card:hover .fa-check-circle, .dish_card :focus .fa-check-circle {
   animation: dish_card_circle_translate 1000ms both ease-in-out;
   -webkit-animation: dish_card_circle_translate 1000ms both ease-in-out;
 }
-.dish_card:hover .far.fa-check-circle::before {
+.dish_card:hover .far.fa-check-circle::before, .dish_card :focus .far.fa-check-circle::before {
   transform: rotate(1080deg);
   transition: transform 1000ms ease-in-out;
   -webkit-transition: transform 1000ms ease-in-out;
@@ -715,7 +715,7 @@ h1 {
   -webkit-transition: all 400ms;
   /**Slightly magnifying animation on hover**/
 }
-.carte_restaurant:hover {
+.carte_restaurant:hover, .carte_restaurant :focus {
   transform: scale(1.04);
   transition: transform 400ms;
   -webkit-transition: transform 400ms;
