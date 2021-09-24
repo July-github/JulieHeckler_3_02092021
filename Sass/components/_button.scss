@@ -125,11 +125,12 @@
     justify-content: flex-end;
     align-items: center;
     color: transparent;
+    overflow:hidden;
+    padding: 0px 5px;
     
     &::after{/****Button creation without modifying html for a background-color appearance on hover****/
         content: '\f004';
         position: absolute;
-        align-items: center;
         @include heart_fill;
         opacity: 0;
     }
