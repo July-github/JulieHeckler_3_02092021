@@ -146,7 +146,7 @@ h1{
     -webkit-transition: all 400ms;
 
     /**Slightly magnifying animation on hover**/
-    &:hover, :focus{
+    &:hover{
         transform: scale(1.04);
         transition: transform 400ms;
         -webkit-transition: transform 400ms;

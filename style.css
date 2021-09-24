@@ -248,6 +248,7 @@
 .button_like {
   display: flex;
   align-items: center;
+  outline: none;
 }
 
 .fas.fa-heart {
@@ -724,7 +725,7 @@ h1 {
   -webkit-transition: all 400ms;
   /**Slightly magnifying animation on hover**/
 }
-.carte_restaurant:hover, .carte_restaurant :focus {
+.carte_restaurant:hover {
   transform: scale(1.04);
   transition: transform 400ms;
   -webkit-transition: transform 400ms;
