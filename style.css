@@ -264,12 +264,17 @@
   /****Button creation without modifying html for a background-color appearance on hover****/
   content: "\f004";
   position: absolute;
-  align-items: center;
   background-image: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 40px;
+  height: 40px;
 }
 .fas.fa-heart:hover, .fas.fa-heart :focus {
   cursor: grab;
@@ -353,13 +358,12 @@ footer p {
   align-items: center;
   background-color: #F6F6F6;
   width: 100%;
-  top: 250px;
   padding-bottom: 30px;
 }
 
 #presentation_menu img {
   width: 100%;
-  height: 260px;
+  height: 350px;
   object-fit: cover;
 }
 
@@ -523,7 +527,7 @@ footer p {
   -webkit-animation: dish_card_circle_translate 1000ms both ease-in-out;
   outline: none;
 }
-.dish_card:hover .far.fa-check-circle::before, .dish_card :focus .far.fa-check-circle::before {
+.dish_card:hover .fa-check-circle::before, .dish_card :focus .fa-check-circle::before {
   transform: rotate(1080deg);
   transition: transform 1000ms ease-in-out;
   -webkit-transition: transform 1000ms ease-in-out;
@@ -568,6 +572,12 @@ footer p {
 @media all and (max-width: 647px) {
   .dish_block {
     width: 90%;
+  }
+
+  #presentation_menu img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
   }
 }
 body {
