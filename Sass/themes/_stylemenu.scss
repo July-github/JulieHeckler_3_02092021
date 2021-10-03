@@ -12,7 +12,7 @@
         color: black;
     }
 }
-/****** section presentation_menu ******/
+/******section presentation_menu******/
 #container_menu{
     display: flex;
     flex-direction: column;
@@ -103,8 +103,8 @@
     /**Reduced width to make appear the check box on the right**/
     &:hover, :focus{
         .dish{
+            cursor: grab;
             width: 80%;
-            outline: none;
         }
     }
     &_box{
@@ -180,32 +180,26 @@
     }
     /**Apparition of the check box with a rotating icon**/
     &:hover, :focus{
-        cursor: grab;
-        outline: none;
         
         & .fa-check-circle{
             animation: dish_card_circle_translate 1000ms both ease-in-out;
             -webkit-animation: dish_card_circle_translate 1000ms both ease-in-out;
-            outline: none;
         }
         & .fa-check-circle::before{
             transform: rotate(1080deg);
             transition: transform 1000ms ease-in-out;
             -webkit-transition: transform 1000ms ease-in-out;
-            outline: none;
         }
     }
 }
 /*responsive tablette*/
-@media all and (max-width: 1044px)
-{
+@media all and (max-width: 1044px){
 .dish_block{
     width: 70%;
 }
 }
 /*responsive mobile*/
-@media all and (max-width: 764px)
-{
+@media all and (max-width: 764px){
 .presentation_menu_name_restaurant{
     justify-content: space-between;
 }
@@ -231,8 +225,7 @@
     font-size: 0.9em;
 }
 }
-@media all and (max-width: 647px)
-{
+@media all and (max-width: 647px){
 .dish_block{
     width: 90%;
 }

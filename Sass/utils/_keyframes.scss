@@ -1,18 +1,18 @@
 @keyframes loader{
     0%{
-        background-position: center 70%;
+        background-position: 0% 70%;
     }
     20%{
-        background-position: center 62%;
+        background-position: 0% 62%;
     }
     40%{
-        background-position: center 60%;
+        background-position: 0% 60%;
     }
     60%{
-        background-position: center 58%;
+        background-position: 0% 58%;
     }
     80%{
-        background-position: center 50%;
+        background-position: 0% 50%;
         transform: rotateY(0deg);
     }
     99.9%{
@@ -21,7 +21,7 @@
         transform: rotateY(740deg);
     }
     100%{
-        background-position: center 40%;
+        background-position: 0% 40%;
         opacity: 0;
         z-index: -10;
     }
@@ -37,17 +37,6 @@
     100%{
         z-index: -11;
         opacity: 0;
-    }
-}
-@keyframes menu_apparition{
-    0%{
-        transform: translateY(15px);
-        opacity: 0;
-    }
-    
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
     }
 }
 @keyframes button_like_fill{
@@ -70,28 +59,22 @@
         opacity: 1;
     }
 }
+@keyframes menu_apparition{
+    0%{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 @keyframes dish_card_circle_translate{
     0%{
         transform: translateX(0%);
     }
     100%{
         transform: translateX(-99%);
-    }
-}
-@keyframes dish_card_circle_rotate{
-    0%{
-        transform: rotate(360deg);
-    }
-    20%{
-        transform: rotate(180deg);
-    }
-    40%{
-        transform: rotate(180deg);
-    }
-    60%{
-        transform: rotate(180deg);
-    }
-    100%{
-        transform: rotate(0);
     }
 }

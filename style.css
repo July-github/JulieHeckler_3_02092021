@@ -1,19 +1,19 @@
 /******************Accueil***************/
 @keyframes loader {
   0% {
-    background-position: center 70%;
+    background-position: 0% 70%;
   }
   20% {
-    background-position: center 62%;
+    background-position: 0% 62%;
   }
   40% {
-    background-position: center 60%;
+    background-position: 0% 60%;
   }
   60% {
-    background-position: center 58%;
+    background-position: 0% 58%;
   }
   80% {
-    background-position: center 50%;
+    background-position: 0% 50%;
     transform: rotateY(0deg);
   }
   99.9% {
@@ -23,7 +23,7 @@
     transform: rotateY(740deg);
   }
   100% {
-    background-position: center 40%;
+    background-position: 0% 40%;
     opacity: 0;
     z-index: -10;
   }
@@ -40,16 +40,6 @@
   100% {
     z-index: -11;
     opacity: 0;
-  }
-}
-@keyframes menu_apparition {
-  0% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
   }
 }
 @keyframes button_like_fill {
@@ -72,29 +62,22 @@
     opacity: 1;
   }
 }
+@keyframes menu_apparition {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 @keyframes dish_card_circle_translate {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(-99%);
-  }
-}
-@keyframes dish_card_circle_rotate {
-  0% {
-    transform: rotate(360deg);
-  }
-  20% {
-    transform: rotate(180deg);
-  }
-  40% {
-    transform: rotate(180deg);
-  }
-  60% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(0);
   }
 }
 .loader {
@@ -248,7 +231,6 @@
 .button_like {
   display: flex;
   align-items: center;
-  outline: none;
 }
 
 .fas.fa-heart {
@@ -278,12 +260,11 @@
 }
 .fas.fa-heart:hover, .fas.fa-heart :focus {
   cursor: grab;
-  outline: none;
 }
 .fas.fa-heart:hover::after, .fas.fa-heart :focus::after {
   animation: button_like_fill 3000ms 100ms forwards ease-in-out;
   -webkit-animation: button_like_fill 3000ms 100ms forwards ease-in-out;
-  outline: none;
+  -webkit-text-stroke: 1px transparent;
 }
 
 footer {
@@ -351,7 +332,7 @@ footer p {
   color: black;
 }
 
-/****** section presentation_menu ******/
+/******section presentation_menu******/
 #container_menu {
   display: flex;
   flex-direction: column;
@@ -447,8 +428,8 @@ footer p {
   /**Apparition of the check box with a rotating icon**/
 }
 .dish_card:hover .dish, .dish_card :focus .dish {
+  cursor: grab;
   width: 80%;
-  outline: none;
 }
 .dish_card_box {
   width: 100%;
@@ -518,20 +499,14 @@ footer p {
   font-weight: 500;
   font-size: 1em;
 }
-.dish_card:hover, .dish_card :focus {
-  cursor: grab;
-  outline: none;
-}
 .dish_card:hover .fa-check-circle, .dish_card :focus .fa-check-circle {
   animation: dish_card_circle_translate 1000ms both ease-in-out;
   -webkit-animation: dish_card_circle_translate 1000ms both ease-in-out;
-  outline: none;
 }
 .dish_card:hover .fa-check-circle::before, .dish_card :focus .fa-check-circle::before {
   transform: rotate(1080deg);
   transition: transform 1000ms ease-in-out;
   -webkit-transition: transform 1000ms ease-in-out;
-  outline: none;
 }
 
 /*responsive tablette*/
