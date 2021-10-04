@@ -387,6 +387,8 @@
       -ms-flex-align: center;
           align-items: center;
   outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .fas.fa-heart {
@@ -404,6 +406,10 @@
           align-items: center;
   color: transparent;
   outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 3000ms ease-in-out;
+  transition: all 3000ms ease-in-out;
 }
 
 .fas.fa-heart::after {

@@ -232,6 +232,7 @@
   display: flex;
   align-items: center;
   outline: none;
+  box-sizing: border-box;
 }
 
 .fas.fa-heart {
@@ -243,6 +244,8 @@
   align-items: center;
   color: transparent;
   outline: none;
+  box-sizing: border-box;
+  transition: all 3000ms ease-in-out;
 }
 .fas.fa-heart::after {
   /****Button creation without modifying html for a background-color appearance on hover****/
