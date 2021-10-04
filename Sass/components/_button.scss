@@ -115,6 +115,7 @@
 .button_like{
     display: flex;
     align-items: center;
+    outline: none;
 }
 .fas.fa-heart{
     -webkit-text-stroke: 1px black;
@@ -124,6 +125,7 @@
     justify-content: flex-end;
     align-items: center;
     color: transparent;
+    outline: none;
     
     &::after{/****Button creation without modifying html for a background-color appearance on hover****/
         content: '\f004';
@@ -139,11 +141,13 @@
     }
     &:hover, :focus{
         cursor: grab;
+        outline: none;
         
         &::after{
             animation: button_like_fill 3000ms 100ms forwards ease-in-out;
             -webkit-animation: button_like_fill 3000ms 100ms forwards ease-in-out;
             -webkit-text-stroke: 1px transparent;
+            outline: none;
         }
     }
 }
