@@ -122,7 +122,7 @@
     font-size: 1.5em;
     display: flex;
     position: relative;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     color: transparent;
     outline: none;
@@ -132,12 +132,17 @@
         position: absolute;
         @include heart_fill;
         opacity: 0;
-        
+        overflow:hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
     }
     &:hover, :focus{
         cursor: grab;
         outline: none;
-        
+        -webkit-text-stroke: 1px transparent;
         &::after{
             animation: button_like_fill 3000ms 100ms forwards ease-in-out;
             -webkit-animation: button_like_fill 3000ms 100ms forwards ease-in-out;
