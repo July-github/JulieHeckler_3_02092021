@@ -253,12 +253,6 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 40px;
-  height: 40px;
 }
 .fas.fa-heart:hover, .fas.fa-heart :focus {
   cursor: grab;
@@ -267,6 +261,7 @@
 .fas.fa-heart:hover::after, .fas.fa-heart :focus::after {
   animation: button_like_fill 3000ms 100ms forwards ease-in-out;
   -webkit-animation: button_like_fill 3000ms 100ms forwards ease-in-out;
+  -webkit-text-stroke: 1px transparent;
   outline: none;
 }
 
