@@ -42,6 +42,17 @@
     opacity: 0;
   }
 }
+@keyframes page_loader_overflow {
+  0% {
+    opacity: 0;
+  }
+  99.9% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes button_like_fill {
   0% {
     opacity: 0;
@@ -275,49 +286,54 @@
   outline: none;
 }
 
-footer {
+.footer {
   background-color: #353535;
   padding-left: 15%;
   padding-top: 15px;
   padding-bottom: 25px;
 }
-footer .logo {
+.footer.index {
+  animation: page_loader_overflow 5000ms 100ms forwards ease-in-out;
+  -webkit-animation: page_loader_overflow 5000ms 100ms forwards ease-in-out;
+}
+.footer .logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.1em;
   color: white;
   padding-bottom: 10px;
 }
-footer .fas {
+.footer .fas {
   color: white;
   font-size: 0.8em;
   margin-right: 5px;
 }
-footer .fas.fa-hands-helping {
+.footer .fas.fa-hands-helping {
   font-size: 0.7em;
   margin-right: 2px;
 }
-footer a {
+.footer a {
   font-family: "Roboto", sans-serif;
   color: white;
   text-decoration: none;
   font-size: 1em;
   font-weight: 350;
 }
-footer p {
+.footer p {
   margin: 5px 0px;
 }
 
-.footer {
+.footer_links {
   display: flex;
   justify-content: flex-start;
 }
+
 .footer_block.last {
   padding-left: 30%;
 }
 
 /*responsive mobile*/
 @media all and (max-width: 667px) {
-  .footer {
+  .footer_links {
     display: block;
   }
 
@@ -450,7 +466,7 @@ footer p {
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   display: flex;
-  color: white;
+  color: transparent;
   font-size: 1.4em;
   position: absolute;
   right: -15%;
@@ -460,6 +476,13 @@ footer p {
   align-items: center;
   justify-content: center;
   z-index: 6;
+}
+.dish_card_box .fa-check-circle::before {
+  content: "\f058";
+  color: transparent;
+  background-color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .dish_card .dish {
   display: flex;
@@ -529,6 +552,11 @@ footer p {
     justify-content: space-between;
   }
 
+  .menu_titres {
+    align-self: flex-start;
+    padding-left: 20px;
+  }
+
   .menu_restaurant {
     align-items: flex-start;
   }
@@ -545,16 +573,17 @@ footer p {
   }
 
   .presentation_menu_name_restaurant h1 {
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
 
   .menu_restaurant h2 {
     font-size: 0.9em;
+    align-items: flex-start;
   }
 }
 @media all and (max-width: 647px) {
   .dish_block {
-    width: 90%;
+    width: 100%;
   }
 
   #presentation_menu img {
@@ -570,8 +599,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-#main_page {
+.main_page {
   margin: 0 auto;
+}
+.main_page.index {
+  animation: page_loader_overflow 5000ms 100ms forwards ease-in-out;
+  -webkit-animation: page_loader_overflow 5000ms 100ms forwards ease-in-out;
 }
 
 /****header*****/

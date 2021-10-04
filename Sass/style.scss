@@ -13,10 +13,15 @@ body{
     color: black;
     font-family: 'Roboto', sans-serif;
 }
-#main_page
-{
+.main_page{
     margin: 0 auto;
+
+    &.index{
+    animation: page_loader_overflow 5000ms 100ms forwards ease-in-out;
+    -webkit-animation: page_loader_overflow 5000ms 100ms forwards ease-in-out;
+    }
 }
+
 /****header*****/
 header img{
     display: block;

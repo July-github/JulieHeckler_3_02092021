@@ -118,7 +118,7 @@
             background-color: $color-tertiary;
             border-radius: 0px 15px 15px 0px;
             display: flex;
-            color: white;
+            color: transparent;
             font-size: 1.4em;
             position: absolute;
             right: -15%;
@@ -128,6 +128,14 @@
             align-items: center;
             justify-content: center;
             z-index: 6;
+
+            &::before{
+                content: "\f058";
+                color: transparent;
+                background-color: white;
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
         }
     }
     & .dish{
@@ -203,6 +211,10 @@
 .presentation_menu_name_restaurant{
     justify-content: space-between;
 }
+.menu_titres{
+    align-self: flex-start;
+    padding-left: 20px;
+}
 .menu_restaurant{
     align-items: flex-start;
 
@@ -219,15 +231,16 @@
     }
 }
 .presentation_menu_name_restaurant h1{
-    font-size: 1.6em;
+    font-size: 1.3em;
 }
 .menu_restaurant h2{
     font-size: 0.9em;
+    align-items: flex-start;
 }
 }
 @media all and (max-width: 647px){
 .dish_block{
-    width: 90%;
+    width: 100%;
 }
 #presentation_menu img{
     width: 100%;
